@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Back" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">¡Registrate!</ion-card-title>
+    </ion-card-header>
+
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()" class="ion-padding">
+
+      <ion-list-header>
+        <ion-label>Formulario Válido: {{formulario.valid}} </ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input name="nombre" [(ngModel)]="usuario.nombre" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+
+        <ion-input type="password" name="password" [(ngModel)]="usuario.password" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="usuario.email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+        </ion-input>
+
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Fecha de nacimiento</ion-label>
+        <ion-datetime value="1990-02-19" name="fechanac" [(ngModel)]="usuario.fechanac" required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-select placeholder="Selecciona una opcion" name="genero" [(ngModel)]="usuario.genero" required>
+          <ion-select-option value="f">Femenino</ion-select-option>
+          <ion-select-option value="m">Masculino</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button [disabled]="formulario.invalid" type="submit" expand="block" routerLink="/inicio">Enviar Datos
+      </ion-button>
+
+
+    </form>
+
+  </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,50 @@
+//estilos para el ion content y el interior de este
+ion-content{
+    --background:url("../../../assets/recursos/email-pattern/email-pattern.png");
+    
+}
+
+//estilos para el header y el interior de este
+ion-header{
+    --background: url("../../../assets/recursos/email-pattern/email-pattern.png") ;
+   
+}
+
+//estilos para el footer y el interior de este
+ion-footer{
+    --footer-background: url("../../../assets/recursos/email-pattern/email-pattern.png");
+    
+}
+
+//todas las targetas con fondo blanco
+ion-card{
+    --background:white;
+}
+
+//todos los toolbar 
+ion-toolbar {
+    --background: url("../../../assets/recursos/email-pattern/email-pattern.png");
+}
+
+
+//Iconos Footer
+
+.icon_footer{
+    width: 50%; 
+}
+
+//fuente
+
+@font-face {
+    font-family: 'comic';
+    src: url('../../../assets/fuentes/Comicbon\ -\ personal\ use.ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+.fuente_comic{
+    font-family: 'comic';
+}
+
+
+

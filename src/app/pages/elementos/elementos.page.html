@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>elementos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides mode="ios" pager="ios" scrollbar="ios">
+
+    <ion-slide *ngFor = "let h of hojas">
+      <ion-card>
+        <ion-card-header>
+          <ion-img [src]="h.imagen"></ion-img>
+          <ion-card-subtitle>{{h.nombre}}</ion-card-subtitle>
+          <ion-card-title>{{h.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-text >
+            <p>{{h.parrafo}}</p>
+          </ion-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+
+    <ion-slide>
+      <ion-card >
+        <ion-card-header>
+          <ion-img src="/assets/recursos/read.png"></ion-img>
+          <ion-card-title>Bibliografía...</ion-card-title>
+        </ion-card-header>
+  
+        <ion-card-content>
+
+          <ion-list  >
+            <ion-item *ngFor="let l of links">
+              <ion-label class="ion-text-center"> 
+                <a [href]="l.link" target="blank"> {{l.nombre}} </a>  
+              </ion-label>
+            </ion-item>
+            
+          </ion-list>
+
+
+          
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    
+
+  </ion-slides>
+
+</ion-content>
