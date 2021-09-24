@@ -1,6 +1,7 @@
 # Debateli
 
-<BR>
+
 --Integrantes--
+<br>
 Alexis Barrueto
 Ariel Santelices
